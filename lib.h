@@ -9,7 +9,7 @@ using namespace std;
 const int DIM = 125000000;
 
 //if n is prime, return true
-bool isPrime(const long long int);
+bool isPrime(const long long int,long long int*, int&);
 
 //calculate pirme numbers
 void calcPrime(const long long int, const long long int, long long int*, int&);

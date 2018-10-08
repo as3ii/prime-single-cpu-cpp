@@ -35,7 +35,7 @@ int main(){
     calcPrime(0,max,array,dim);
 	
 	//print result
-	cout << "Do you want to see the result? [y/n] ";
+	cout << "Do you want to see the " << dim << " result? [y/n] ";
 	cin >> show_res;
 	if(show_res=='y' || show_res=='Y') {
 	    printArray(array, dim);

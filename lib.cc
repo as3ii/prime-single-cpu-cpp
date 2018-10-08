@@ -14,7 +14,7 @@ void deleteArray(long long int* array) {
     delete [] array;
 }
 
-bool isPrime(const long long int n){
+bool isPrime(const long long int n, long long int array[], int& dim){
     bool res = true;
     long double sqrtn = sqrt(n);
     if(n<2)
@@ -24,8 +24,8 @@ bool isPrime(const long long int n){
     else if(n%2==0)
         res = false;
     else{
-        for(long long int i=3; (i<=sqrtn)&&(res==true); i+=2)
-            if(n%i==0)
+        for(int i=0; (i<dim)&&(i<=sqrtn)&&(res==true); i++)
+            if(array[i]!=0 && array[i]!=1 && n%array[i]==0)
                 res = false;
     }
     return(res);
@@ -36,7 +36,7 @@ void calcPrime(const long long int start, const long long int stop, long long in
     int i = 0;
     bool brk=true;
     while((var<stop) && (brk==true)){
-        if(isPrime(var)) {
+        if(isPrime(var,array,i)) {
             array[i] = var;
             i++;
         }
