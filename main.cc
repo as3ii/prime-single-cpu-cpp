@@ -34,6 +34,8 @@ int main(){
 
     calcPrime(0,max,array,dim);
 	
+    cout << "Ended in " << difftime(time(NULL),timeStart) << " seconds." << endl;
+
 	//print result
 	cout << "Do you want to see the " << dim << " result? [y/n] ";
 	cin >> show_res;
