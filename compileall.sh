@@ -6,5 +6,5 @@ for i in *.h; do
 done
 
 echo "compiling main.cc"
-g++ -Wall -O3 -std=c++11 -pthread main.cc lib.o -o primi-single-cpu-c++
+g++ -Wall -O3 -std=c++11 main.cc lib.o -o prime-single-cpu-c++
 
