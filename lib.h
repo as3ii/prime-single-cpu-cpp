@@ -4,9 +4,10 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
+#include <climits>
 using namespace std;
 
-const int DIM = 125000000;
+const int DIM = INT_MAX;
 
 //if n is prime, return true
 bool isPrime(const long long int,long long int*, int&);
