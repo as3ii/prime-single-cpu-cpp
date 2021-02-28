@@ -12,7 +12,7 @@ int main(){
 	long long int max;
 	char show_res;
 	cout << "Max number of results: " << DIM << endl;
-	
+
 	//max number
 	cout << "Type the max number: ";
 	cin >> max;
@@ -21,19 +21,19 @@ int main(){
 			 << "Max number set to " << DIM << endl;
 		max = DIM;
 	}
-	
+
 	time(&timeStart);
-	
+
 	//allocate variables
 	cout << "Creating dynamic variables... ";
 	int dim;
-	
+
 	long long int* array;
 	array = new long long int[DIM];
 	cout << "Done" << endl;
 
     calcPrime(0,max,array,dim);
-	
+
     cout << "Ended in " << difftime(time(NULL),timeStart) << " seconds." << endl;
 
 	//print result
@@ -43,7 +43,7 @@ int main(){
 	    printArray(array, dim);
 	}
 	cout << " --- End! --- " << endl;
-    
+
     //deallocate variables
     cout << "Deleting dynamic variables... ";
     deleteArray(array);
